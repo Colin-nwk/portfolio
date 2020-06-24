@@ -2,9 +2,9 @@ $light-color: #f4f4f4;
 $font-stack: 'Segoe UI', Helvetica, sans-serif;
 $primary-color: #444;
 $show-home-image: true;
-$home-image: url(../dist/img/create-section1.jpg);
+$home-img: url(../img/create-section1.jpg);
 $background-opacity: 0.9;
-$secondary-color: #eece1a;
+$secondary-color: #eece1a; 
 
 /*
 // set text color based on background
@@ -29,22 +29,22 @@ $secondary-color: #eece1a;
     transition: all 0.5s ease-out;
 }
 
-// @mixin background{
-//     @if $show-home-image{
-//          & #bg-img{
-//             background: $home-image;
-//             background-attachment: fixed;
-//             background-size: cover;
-//             &::after{
-//                 content: '';
-//                 position: absolute;
-//                 top: 0;
-//                 right: 0;
-//                 width: 100%;
-//                 height: 100%;
-//                 z-index: -1;
-//                 background: rgba($primary-color, $background-opacity) ;
-//             }
-//          }
-//     }
-// }
+@mixin background {
+    @if $show-home-image { 
+         &#bg-img {
+            background: $home-img;
+            background-attachment: fixed;
+            background-size: cover;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity) ;
+            }
+         }
+    }
+}

@@ -6,23 +6,6 @@
 }
 
 /*
-// set text color based on background
-@function set-text-color($color){
-    @if(lightness($color)> 70){
-        @return #333;
-    } @else{
-        @return #fff;
-    }
-}
-
-//set background & text color
-@mixin set-background($color){
-   background-color: $color; 
-   color: set-text-color($color);
-}
-
-*/
-/*
 %btn{
     display: inline-block;
     border-radius: .3rem;
@@ -47,11 +30,46 @@
 
 
 */
+/*
+// set text color based on background
+@function set-text-color($color){
+    @if(lightness($color)> 70){
+        @return #333;
+    } @else{
+        @return #fff;
+    }
+}
+
+//set background & text color
+@mixin set-background($color){
+   background-color: $color; 
+   color: set-text-color($color);
+}
+
+*/
 body {
+  background: #444;
+  color: #fff;
   height: 100%;
   font-family: "Segoe UI", Helvetica, sans-serif;
   line-height: 1.5;
-  background-color: #444;
+}
+
+body#bg-img {
+  background: url(../img/create-section1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body#bg-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(68, 68, 68, 0.9);
 }
 
 h1,
@@ -115,22 +133,6 @@ main#home {
 
 main#home h1 {
   margin-top: 20vh;
-}
-
-#bg-img {
-  background: url(../dist/img/create-section1.jpg) no-repeat center;
-  background-size: cover;
-}
-
-#bg-img::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: rgba(68, 68, 68, 0.9);
 }
 
 .m-1 {
