@@ -2,68 +2,69 @@
 @import './config';
 @import './buttons';
 
-body {
-	font-family: $font-stack;
-	background-color: $light-color;
-	line-height: 1.6;
-	
-} 
 
-img{
-	width: 100%;
+body{
+	@include background;
+    height: 100%;
+    font-family: $font-stack;
+	line-height: 1.5;
+	background-color: $primary-color;
+
+}
+
+
+
+// Headings
+h1,h2, h3{
+    margin: 0;
+    font-size: 400;
+	&.lg-heading{
+		font-size: 6rem;
+	}
+	&.sm-heading{
+		margin-bottom: 2rem;
+		padding: 0.2rem 1rem;
+		background: rgba(lighten($primary-color, 2),0.5);
+	}
 }
 
 a{
+	color: $light-color;
 	text-decoration: none;
 }
 
-.showcase{
-	@include set-background($primary-color);
-	height: 600px;
-	// color: $light-color;
-	
-	
-	nav{
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		
-		
-		ul{
-			display: flex;
-			list-style: none;
+header{
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+}
+.text-secondary{
+	color: $secondary-color;
+}
+main{
+	padding: 4rem;
+	height: 100%;
+
+	.icons{
+		margin-top: 1rem;
+
+		a{
+			padding: 0.4rem;
+			@include ease-out();
+
+			&:hover{
+				color: $secondary-color;
+			}
 		}
-		li{
-			padding: 1rem;	
-		}
-		
-		a:hover{
-			color: $secondary-color;
-		}
-		
 	}
-	
-	a{
-		color: set-text-color($primary-color);
-		
-	}
-	&-content{
-		height: 100% ;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-top: 2rem ;
-		
-		img{
-			width: 50%;
-		}
+	&#home{
+		overflow: hidden;
+
 		h1{
-			font-size: 3rem;
-			line-height: 1.2;
+			margin-top: 20vh;
 		}
 	}
 }
-
 
 
 
