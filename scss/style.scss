@@ -1,6 +1,7 @@
 @import './resets';
 @import './buttons';
 @import './config';
+@import './menu';
 
 body {
 	@include background();
