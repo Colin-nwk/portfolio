@@ -49,6 +49,15 @@ $secondary-color: #eece1a;
     }
 }
 
+// Set text color
+@function set-text-color($color){
+    @if (lightness($color)> 40){
+        @return  #000;
+    }@else{
+        @return #fff;
+    }
+}
+
 // media query mixins
 @mixin media-sm {
     @media screen and (max-width: 500px) {
