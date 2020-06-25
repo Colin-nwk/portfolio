@@ -67,23 +67,23 @@ background: var(--primary);
     border-radius: 5px;
 }
 .neumorphism-2{
-    margin: 15px;
-    height: 100px;
-    width: 100px;
-    background: var(--primary);
+    // margin: 15px;
+    // height: 100px;
+    // width: 100px;
+    background: $shadow;
     box-shadow:inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, .288);
-    border-radius: 5px;
+    // border-radius: 5px;
 }
 .neumorphism-3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     margin: 15px;
-    height: 100px;
-    width: 100px;
-    background: var(--primary);
+    // height: 100px;
+    // width: 100px;
+    background: $shadow;
     box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
-    border-radius: 50%;
+    // border-radius: 50%;
     position: relative;
 
     &:after{
